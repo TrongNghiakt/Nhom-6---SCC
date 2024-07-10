@@ -10,6 +10,7 @@ namespace Nhom_6___SCC
     {
         static void Main(string[] args)
         {
+            // Hello
             Console.Write("Enter the first number: ");
             double num1 = Convert.ToDouble(Console.ReadLine());
 

@@ -19,9 +19,11 @@ namespace Nhom_6___SCC
 
             Console.WriteLine($"{num1} + {num2} = {addTwoNumber(num1,num2)}");
 
-
+            Console.WriteLine($"{num1} - {num2} = {subTwoNumber(num1, num2)}");
             
+            Console.WriteLine($"{num1} * {num2} = {mulTwoNumber(num1, num2)}");
 
+            Console.ReadKey();
 
         }
         static double addTwoNumber(double a, double b)
@@ -29,11 +31,17 @@ namespace Nhom_6___SCC
                 return a + b;
             }
 
-        // Substract
+        static double subTwoNumber(double a, double b)
+        {
+            return a - b;
+        }
 
         // Divide
 
-        // Multiple
+        static double mulTwoNumber(double a, double b)
+        {
+            return a * b;
+        }
 
 
 

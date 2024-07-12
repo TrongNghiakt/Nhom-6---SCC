@@ -18,9 +18,21 @@ namespace Nhom_6___SCC
             double num2 = Convert.ToDouble(Console.ReadLine());
 
             Console.WriteLine($"{num1} + {num2} = {addTwoNumber(num1,num2)}");
+            double result = divideTwoNumber(num1, num2);
+
+            if (!double.IsNaN(result))
+            {
+                Console.WriteLine($"{num1} / {num2} = {divideTwoNumber(num1, num2)}");
+            }
+            else
+            {
+                Console.WriteLine("Không thể chia được.");
+            }
 
 
-            
+            Console.ReadKey();
+
+
 
 
         }
@@ -32,6 +44,13 @@ namespace Nhom_6___SCC
         // Substract
 
         // Divide
+        static double divideTwoNumber(double a, double b)
+        {
+            if (b != 0)
+                return a / b;
+            else
+                return double.NaN;
+        }
 
         // Multiple
 

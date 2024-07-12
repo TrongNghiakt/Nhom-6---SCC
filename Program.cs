@@ -23,7 +23,17 @@ namespace Nhom_6___SCC
 
             Console.WriteLine($"{num1} * {num2} = {mulTwoNumber(num1, num2)}");
 
-            Console.WriteLine($"{num1} / {num2} = {divideTwoNumber(num1, num2)}");
+
+            double result = divideTwoNumber(num1, num2);
+
+            if (!double.IsNaN(result))
+            {
+                Console.WriteLine($"{num1} / {num2} = {divideTwoNumber(num1, num2)}");
+            }
+            else
+            {
+                Console.WriteLine("Không thể chia được.");
+            }
 
 
             // Input for complex numbers
@@ -67,10 +77,10 @@ namespace Nhom_6___SCC
         // divide
         static double divideTwoNumber(double a, double b)
         {
-            if(b==0)
-                throw new DivideByZeroException();
-            else
+            if (b != 0)
                 return a / b;
+            else
+                return double.NaN;
         }
 
     }

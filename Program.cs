@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,29 +17,11 @@ namespace Nhom_6___SCC
             Console.Write("Enter the second number: ");
             double num2 = Convert.ToDouble(Console.ReadLine());
 
-
             Console.WriteLine($"{num1} + {num2} = {addTwoNumber(num1, num2)}");
-
-            double result = divideTwoNumber(num1, num2);
-
-            if (!double.IsNaN(result))
-            {
-                Console.WriteLine($"{num1} / {num2} = {divideTwoNumber(num1, num2)}");
-            }
-            else
-            {
-                Console.WriteLine("Không thể chia được.");
-            }
-
-
-           
-
 
             Console.WriteLine($"{num1} - {num2} = {subTwoNumber(num1, num2)}");
 
-
             Console.WriteLine($"{num1} * {num2} = {mulTwoNumber(num1, num2)}");
-
 
             // Input for complex numbers
             Console.Write("Enter the first real complex number: ");
@@ -55,24 +37,11 @@ namespace Nhom_6___SCC
             ComplexNumber complex1 = new ComplexNumber(real1, imag1);
             ComplexNumber complex2 = new ComplexNumber(real2, imag2);
 
-
-            
-
             ComplexNumber complexSum = complex1 + complex2;
-
 
             Console.WriteLine($"({complex1}) + ({complex2}) = {complexSum}");
 
             Console.ReadKey();
-        }
-
-        // Divide
-        static double divideTwoNumber(double a, double b)
-        {
-            if (b != 0)
-                return a / b;
-            else
-                return double.NaN;
         }
 
         static double addTwoNumber(double a, double b)

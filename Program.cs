@@ -23,6 +23,9 @@ namespace Nhom_6___SCC
 
             Console.WriteLine($"{num1} * {num2} = {mulTwoNumber(num1, num2)}");
 
+            Console.WriteLine($"{num1} / {num2} = {divideTwoNumber(num1, num2)}");
+
+
             // Input for complex numbers
             Console.Write("Enter the first real complex number: ");
             double real1 = Convert.ToDouble(Console.ReadLine());
@@ -43,12 +46,13 @@ namespace Nhom_6___SCC
 
             Console.ReadKey();
         }
-
+        // add
         static double addTwoNumber(double a, double b)
         {
             return a + b;
         }
 
+        // subtract
         static double subTwoNumber(double a, double b)
         {
             return a - b;
@@ -59,6 +63,16 @@ namespace Nhom_6___SCC
         {
             return a * b;
         }
+
+        // divide
+        static double divideTwoNumber(double a, double b)
+        {
+            if(b==0)
+                throw new DivideByZeroException();
+            else
+                return a / b;
+        }
+
     }
 
     struct ComplexNumber

@@ -18,7 +18,14 @@ namespace Nhom_6___SCC
             double num2 = Convert.ToDouble(Console.ReadLine());
 
             Console.WriteLine($"{num1} + {num2} = {addTwoNumber(num1,num2)}");
+
+            Console.WriteLine($"{num1} - {num2} = {subTwoNumber(num1, num2)}");
+
+            Console.WriteLine($"{num1} * {num2} = {mulTwoNumber(num1, num2)}");
+
             double result = divideTwoNumber(num1, num2);
+
+
 
             if (!double.IsNaN(result))
             {
@@ -36,12 +43,19 @@ namespace Nhom_6___SCC
 
 
         }
+        // Add
         static double addTwoNumber(double a, double b)
             {
                 return a + b;
             }
 
         // Substract
+        static double subTwoNumber(double a, double b)
+        {
+            return a - b;
+        }
+
+
 
         // Divide
         static double divideTwoNumber(double a, double b)
@@ -53,7 +67,10 @@ namespace Nhom_6___SCC
         }
 
         // Multiple
-
+        static double mulTwoNumber(double a, double b)
+        {
+            return a * b;
+        }
 
 
 
